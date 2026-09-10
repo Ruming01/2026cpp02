@@ -11,6 +11,6 @@ Company::~Company()
 
 void Company::print() const
 {
-	cout << "íšŒì‚¬ëª… : " << name << '\n';
-	cout << "ì—°ë½ì²˜ : " << tel << '\n';
+	cout << "È¸»ç¸í : " << name << '\n';
+	cout << "¿¬¶ôÃ³ : " << tel << '\n';
 }

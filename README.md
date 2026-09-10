@@ -1,0 +1,1 @@
+This repository is the remote repository for the C++ course in the second semester of 2026.

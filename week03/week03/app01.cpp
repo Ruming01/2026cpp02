@@ -5,25 +5,25 @@ using namespace std;
 class Pokemon
 {
 public:
-	void print() const { cout << "포켓몬 클래스" << endl; }
+	virtual void attack() const { cout << "포켓몬 몸통 박치기" << endl; }
 };
 
 class Pikachu : public Pokemon
 {
 public:
-	void print() const { cout << "피카츄 클래스" << endl; }
+	void attack() const { cout << "피카츄 10만 볼트" << endl; }
 };
 int main()
 {
 	Pokemon* ptr;
 
 	ptr = new Pokemon();
-	ptr->print();
+	ptr->attack();
 	delete ptr;
 	ptr = nullptr;
 
 	ptr = new Pikachu();
-	ptr->print();
+	ptr->attack();
 	delete ptr;
 	ptr = nullptr;
 	return 0;

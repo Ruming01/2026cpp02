@@ -1,4 +1,4 @@
-```
+```mermaid
 classDiagram
     class Beverage {
         -string name
@@ -29,4 +29,4 @@ classDiagram
     %% Relationship Definitions
     Receipt o-- Company : Aggregation
     Receipt ..> Beverage : Dependency
-    ```
+```

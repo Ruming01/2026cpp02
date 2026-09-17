@@ -6,7 +6,7 @@ class Pokemon
 {
 public:
 	//Pokemon() { cout << "Æ÷ÄÏ¸ó »ý¼ºÀÚ" << endl; }
-	~Pokemon() { cout << "Æ÷ÄÏ¸ó °´Ã¼ ¼Ò¸ê" << endl; }
+	virtual ~Pokemon() { cout << "Æ÷ÄÏ¸ó °´Ã¼ ¼Ò¸ê" << endl; }
 	virtual void attack() const { cout << "Æ÷ÄÏ¸ó ¸öÅë ¹ÚÄ¡±â" << endl; }
 };
 
@@ -14,7 +14,7 @@ class Pikachu : public Pokemon
 {
 public:
 	//Pikachu() { cout << "ÇÇÄ«Ãò »ý¼ºÀÚ" << endl; }
-	~Pikachu() { cout << "ÇÇÄ«Ãò °´Ã¼ ¼Ò¸ê" << endl; }
+	virtual ~Pikachu() { cout << "ÇÇÄ«Ãò °´Ã¼ ¼Ò¸ê" << endl; }
 	void attack() const { cout << "ÇÇÄ«Ãò 10¸¸ º¼Æ®" << endl; }
 };
 int main()

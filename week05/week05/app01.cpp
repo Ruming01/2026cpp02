@@ -27,9 +27,13 @@ int main()
 	p = new Dog();
 	p->makeSound();
 
-	Dog* pd = (Dog*)p;  // Down casting old C style
-	pd->makeSound();
+	//Dog* pd = (Dog*)p;  // Down casting old C style
+	//pd->makeSound();
 
+	//Cat* pc = (Cat*)p;  // Down casting old C style. Danger!
+	//Cat* pc = dynamic_cast<Cat*>(p);  // Down casting Modern C++ style.
+	Dog* pd = dynamic_cast<Dog*>(p);
+	pd->makeSound();
 
 	delete p;
 	p = nullptr;

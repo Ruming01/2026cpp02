@@ -18,6 +18,9 @@ public:
 		real++;
 		return *this;
 	}
+	Complex operator+(int scalar) {  // 멤버 함수 연산자 오버로딩
+		return Complex(real + scalar, imaginary);
+	}
 	int getReal() const {
 		return real;
 	}
@@ -74,6 +77,10 @@ int main() {
 	cout << c5;
 	cin >> c5;
 	cout << c5;
+
+	Complex c6 = c4 + c5; // ok
+	Complex c7 = c5 + 7;  // error
+	cout << c7;
 
 	return 0;
 }

@@ -18,8 +18,9 @@ int DynamicArray::getSize() const
 }
 
 int DynamicArray::getValue(int idx) const
-{
-	return ptr[idx];
+{	
+	if (idx >= 0 && idx < getSize())
+		return ptr[idx];
 }
 
 void DynamicArray::setValue(int idx, int value)

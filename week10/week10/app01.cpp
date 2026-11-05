@@ -1,5 +1,7 @@
 #include <iostream>
 #include "DynamicArray.h"
+#include "MyException.h"
+
 using namespace std;
 
 int main() {
@@ -15,6 +17,9 @@ int main() {
 	}
 	catch (const char* errorCode) {
 		cout << errorCode;
+	}
+	catch (const MyException& e) {
+		cout << e.errorCode << e.errorMsg << "(" << e.errorAddress << ")\n";
 	}
 
 	return 0;

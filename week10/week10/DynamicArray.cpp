@@ -21,6 +21,9 @@ int DynamicArray::getValue(int idx) const
 {	
 	if (idx >= 0 && idx < getSize())
 		return ptr[idx];
+	else {
+		throw 1002;
+	}
 }
 
 void DynamicArray::setValue(int idx, int value)

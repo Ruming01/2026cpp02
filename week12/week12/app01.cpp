@@ -1,28 +1,33 @@
+/**************************************************************
+ * smaller 템플릿 함수를 오버로딩 하는 프로그램               *
+ **************************************************************/
 #include <iostream>
-#include <string>
-#include <cstring>
 using namespace std;
 
-
+// 템플릿 함수 정의
 template <typename T>
-void printInfo(T data)
+T smallest(const T& first, const T& second)
 {
-	cout << data << '\n';
-	cout << "General Template \n";
+    if (first < second)
+    {
+        return first;
+    }
+    return second;
 }
-
-template<>
-void printInfo<const char*>(const char* data)
+// 템플릿 함수 정의
+template <typename T>
+T smallest(const T& first, const T& second, const T& third)
 {
-  cout << data << '\n';
-  cout << "Specialized Template\n";
-  //cout << strlen(data) << '\n'; // c funtion can be used in specialized template
+    return smallest(smallest(first, second), third);
 }
 
 int main()
 {
-	printInfo(55);
-	printInfo(2.71);
-	printInfo("C++");
-  return 0;
+    // 매개변수가 3개인 형태 호출
+    cout << "smallest(17, 12, 27) = ";
+    cout << smallest(17, 12, 27) << endl;
+    // 매개변수가 3개인 형태 호출
+    cout << "smallest(8.5, 4.1, 19.75) = ";
+    cout << smallest(8.5, 4.1, 19.75) << endl;
+    return 0;
 }

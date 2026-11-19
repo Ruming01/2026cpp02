@@ -1,33 +1,23 @@
-/**************************************************************
- * smaller 템플릿 함수를 오버로딩 하는 프로그램               *
- **************************************************************/
 #include <iostream>
 using namespace std;
 
-// 템플릿 함수 정의
+
 template <typename T>
-T smallest(const T& first, const T& second)
+void add(T a)
 {
-    if (first < second)
-    {
-        return first;
-    }
-    return second;
+	cout << a << '\n';
 }
-// 템플릿 함수 정의
+
 template <typename T>
-T smallest(const T& first, const T& second, const T& third)
+void add(T a, T b)
 {
-    return smallest(smallest(first, second), third);
+	cout << a << " + " << b << " = " << (a + b) << '\n';
 }
 
 int main()
 {
-    // 매개변수가 3개인 형태 호출
-    cout << "smallest(17, 12, 27) = ";
-    cout << smallest(17, 12, 27) << endl;
-    // 매개변수가 3개인 형태 호출
-    cout << "smallest(8.5, 4.1, 19.75) = ";
-    cout << smallest(8.5, 4.1, 19.75) << endl;
+    add(17);
+    add(8.5, 4.1);
+    add(17.0, 12.0);
     return 0;
 }

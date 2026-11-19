@@ -1,32 +1,28 @@
 #include <iostream>
+#include <string>
+#include <cstring>
 using namespace std;
 
 
 template <typename T>
-void exchange(T* first, T* second)
+void printInfo(T data)
 {
-	T temp = *first;
-	*first = *second;
-	*second = temp;
+	cout << data << '\n';
+	cout << "General Template \n";
+}
+
+template<>
+void printInfo<const char*>(const char* data)
+{
+  cout << data << '\n';
+  cout << "Specialized Template\n";
+  //cout << strlen(data) << '\n'; // c funtion can be used in specialized template
 }
 
 int main()
 {
-	int i1 = 1;
-	int i2 = 2;
-	exchange(&i1, &i2);
-	cout << "swap(1, 2) = ";
-	cout << i1 << "  " << i2 << endl;
-	double d1 = 101.5;
-	double d2 = 402.7;
-	exchange(&d1, &d2);
-	cout << "swap(101.5, 402.7) = ";
-	cout << d1 << "  " << d2 << endl;
-
-	char c1 = 'A';
-	char c2 = 'B';
-	exchange(&c1, &c2);
-	cout << "swap('A', 'B') = ";
-	cout << c1 << "  " << c2 << endl;
-	return 0;
+	printInfo(55);
+	printInfo(2.71);
+	printInfo("C++");
+  return 0;
 }

@@ -1,23 +1,8 @@
-#include <iostream>
-using namespace std;
-
-
-template <typename T>
-void add(T a)
-{
-	cout << a << '\n';
-}
-
-template <typename T>
-void add(T a, T b)
-{
-	cout << a << " + " << b << " = " << (a + b) << '\n';
-}
+#include "add.h"
 
 int main()
 {
-    add(17);
-    add(8.5, 4.1);
-    add(17.0, 12.0);
+    add(9);
+    add(7.1, 9.8);
     return 0;
 }

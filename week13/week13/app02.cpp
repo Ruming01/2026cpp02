@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int data;
+    string data;
     ifstream instrm("pokemons.txt");
     if (!instrm.is_open())
     {

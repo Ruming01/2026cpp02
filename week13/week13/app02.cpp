@@ -5,16 +5,17 @@ using namespace std;
 
 int main()
 {
-    //ofstream outStrm;
-    //outStrm.open("pokemons.txt");
-	ofstream outStrm("pokemons.txt");
-    if (!outStrm.is_open())
+    char* data;
+    ifstream instrm("pokemons.txt");
+    if (!instrm.is_open())
     {
-        cout << "pokemons.txt을 열 수 없습니다.";
+        cout << "pokemons.txt을 열 수 없습니다." << endl;
         assert(false);
     }
-    outStrm << "pikachu" << " ";
-    outStrm << "mu" << " ";
-    outStrm.close();
+    for (int i = 1; i <= 2; i++) {
+        instrm >> data;
+        cout << data << " ";
+    }
+    instrm.close();
     return 0;
 }

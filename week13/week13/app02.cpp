@@ -5,17 +5,28 @@ using namespace std;
 
 int main()
 {
-    string data;
-    ifstream instrm("pokemon.txt", ios :: in); // 해당 파일이 프로젝트 폴더에 존재하지 않음. 기본값이라 생략 가능.
-    if (!instrm.is_open())
+    char ch;
+    ifstream istr;
+    ofstream ostr;
+    istr.open("pokemons.txt", ios::in);
+    if (!istr.is_open())
     {
-        cout << "pokemons.txt을 열 수 없습니다." << endl; //출력 후 종료
+        cout << "pokemons.txt를 열 수 없습니다." << endl;
         assert(false);
     }
-    for (int i = 1; i <= 2; i++) {
-        instrm >> data;
-        cout << data << " ";
+    ostr.open("pokemonsReplica.txt", ios::out);
+    if (!ostr.is_open())
+    {
+        cout << "pokemonsReplica.txt를 열 수 없습니다." << endl;
+        assert(false);
     }
-    instrm.close();
+    // file1의 내용을 읽어 file2에 쓰기
+    while (istr.get(ch))
+    {
+        ostr.put(ch);
+    }
+    // 파일 2개 닫기
+    istr.close();
+    ostr.close();
     return 0;
 }

@@ -65,8 +65,6 @@ int main()
 	Pokemon* mu = new Pokemon(120);
 	pokemons.push(pikachu);
 	pokemons.push(mu);
-    pokemons.pop();
-
 
 	//Stack<int> stack(10);
     Stack<int> stack(3);

@@ -61,28 +61,28 @@ public:
 typedef Stack<int> iStack; //alias
 typedef Stack<Pokemon*> pStack; //alias
 
-int main()
-{
-	//Stack<Pokemon*> pokemons(5);
-    pStack pokemons(5);
-	Pokemon* pikachu = new Pokemon(100);
-	Pokemon* mu = new Pokemon(120);
-	pokemons.push(pikachu);
-	pokemons.push(mu);
-
-	//Stack<int> stack(10);
-	iStack stack(10);
-    stack.push(15);
-    stack.push(-7);
-    stack.push(7);
-    stack.push(8);
-    cout << stack.pop() << endl;
-    cout << stack.pop();
-
-    delete pikachu;
-	pikachu = nullptr;
-    delete mu;
-	mu = nullptr;
-
-    return 0;
-}
+//int main()
+//{
+//	//Stack<Pokemon*> pokemons(5);
+//    pStack pokemons(5);
+//	Pokemon* pikachu = new Pokemon(100);
+//	Pokemon* mu = new Pokemon(120);
+//	pokemons.push(pikachu);
+//	pokemons.push(mu);
+//
+//	//Stack<int> stack(10);
+//	iStack stack(10);
+//    stack.push(15);
+//    stack.push(-7);
+//    stack.push(7);
+//    stack.push(8);
+//    cout << stack.pop() << endl;
+//    cout << stack.pop();
+//
+//    delete pikachu;
+//	pikachu = nullptr;
+//    delete mu;
+//	mu = nullptr;
+//
+//    return 0;
+//}
